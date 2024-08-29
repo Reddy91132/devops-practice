@@ -38,7 +38,7 @@ dnf module disable nodejs -y
 VALIDATE $? "disable default nodejs"
 
 dnf module enable nodejs -y
-VALIDATE $? "ensable default nodejs :20"
+VALIDATE $? "enable default nodejs :20"
 
 dnf install nodejs
 VALIDATE $? "install nodejs"
