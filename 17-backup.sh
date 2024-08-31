@@ -3,6 +3,7 @@
 SORCE_DIR=$1
 DESTI_DIR=$2
 DAYS=${3:-14} #if they give $3 consider,if they not give 14 days will continues
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 R="\e[31m"
 G="\e[32m"
@@ -36,9 +37,19 @@ then
 
    echo "files: $FILES"
 
- if [ ! -z $FILES ]
+ if [ ! -z $FILES ] #true if files is empty,! takes it expression false
 then
      echo "files are found"
+     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
+     find ${source_dir} -name "*.log" +14 |zip "$ZIP_FILE" -@
+     #CHECK IF ZIP FILE IS SUCCESFULLY CREATED OR NOT 
+  if [ -f $ZIP_FILE 
+then
+
+  ] echo "succesfully zipped files older than $DAYS"
+
+  fi
+
 else
      echo "no files older than $DAYS"
 fi
