@@ -47,6 +47,15 @@ then
 then
 
   ] echo "succesfully zipped files older than $DAYS"
+  else
+       echo "zipping the file are failed"
+       #remove the file after zipping
+   while IFS= read -r file
+  do
+    echo "deleting files :$FILES"
+    rm -rf $file
+    done <<< $files
+    exit 1   
 
   fi
 
