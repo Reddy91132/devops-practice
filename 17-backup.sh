@@ -11,7 +11,7 @@ Y="\e[33m"
 USAGE() {
     echo "USAGE :: 19-backup.sh <source> <destination> <days(optional)>"
 }
-if [ $# -lt 2]
+if [ $# -lt 2 ]
 then
 
   USAGE
