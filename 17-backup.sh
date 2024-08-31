@@ -20,12 +20,14 @@ then
   fi
   
   if [ ! -d $SOURCE_DIR ]
+  then
 
     echo "$source_dir does not exist.....please check"
 
   fi
 
   if [ ! -d $SOURCE_DIR ]
+  then
 
     echo "$SOURCE_DIR does not exist.....please check"
   fi
