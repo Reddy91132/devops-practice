@@ -33,6 +33,7 @@ then
   fi
 
   FILES=$(find ${SOURCE_DIR} -name "*.log" -mttime +14)
+  
    echo "files::$FILES"
 
  if [ -z $FILES ]
