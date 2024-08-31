@@ -39,6 +39,6 @@ then
  if [ -z $FILES ]
 then
      echo "files are found"
-  else
+else
      echo "no files older than $DAYS"
-  fi
+fi
