@@ -34,7 +34,7 @@ then
 
   FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
 
-   echo "files::$FILES"
+   echo "files: $FILES"
 
  if [ -z $FILES ]
 then
